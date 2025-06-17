@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 const UserSchema = mongoose.Schema(
   {
-    career: { type: "string", required: [true] },
-    level: { type: "string", required: [true] },
-    plan: { type: "string", required: [true] },
+    name: { type: "string", required: [true] },
+    email: { type: "string", required: [true] },
+    password: { type: "string", required: [true] },
   },
   {
     versionKey: false,
