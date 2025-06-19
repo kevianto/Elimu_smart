@@ -13,10 +13,10 @@ export const createProfileAndGeneratePlan = async (req, res) => {
   }
 
   try {
-    const existingProfile = await Profile.findOne({ userId });
-    if (existingProfile) {
-      return res.status(400).json({ error: "Profile already exists for this userId" });
-    }
+    // const existingProfile = await Profile.findOne({ userId });
+    // if (existingProfile) {
+    //   return res.status(400).json({ error: "Profile already exists for this userId" });
+    // }
 
     // 1. Create Profile
     const newProfile = new Profile({ userId, career, grades, time });
@@ -98,8 +98,8 @@ try {
     // 5. Respond with both
     res.status(201).json({
       message: "Profile and Study Plan created successfully",
-      profile: newProfile,
-      plan: newPlan,
+      // profile: newProfile,
+      // plan: newPlan,
     });
 
   } catch (error) {
